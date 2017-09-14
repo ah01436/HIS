@@ -16,9 +16,7 @@ namespace HIS
         Connection con = new Connection();
         DataView dv;
         DataTable dt=new DataTable();
-        string docName;
-        string docCode;
-        frm_visit ob = new frm_visit();
+        frm_visit  ob = new frm_visit();
         public docSearch()
         {
             InitializeComponent();

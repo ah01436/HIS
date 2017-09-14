@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 namespace HIS
 {
     public partial class frmServerSetting : Form
@@ -24,7 +18,7 @@ namespace HIS
         private void frmServerSetting_Load(object sender, EventArgs e)
         {
             var p = Properties.Settings.Default;
-            MessageBox.Show(p.Server + "\t" + p.database + "\t" + p.uid + "\t" + p.password + "\t" + p.IsWinAuth.ToString());
+         //   MessageBox.Show(p.Server + "\t" + p.database + "\t" + p.uid + "\t" + p.password + "\t" + p.IsWinAuth.ToString());
             if (p.Server == "")
             {
                 txtServerName.Text = ".";

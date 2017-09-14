@@ -298,9 +298,8 @@ namespace HIS
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message);
-            return false; connection.Close();
+            return false; 
             }
-            connection.Close();
         }
        public bool ExecuteQueries(string Query)
        {
@@ -318,6 +317,7 @@ namespace HIS
 
            catch (SqlException ex)
            {
+               MessageBox.Show(ex.Number.ToString());
                return false;
 
            }

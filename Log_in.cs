@@ -2,7 +2,6 @@
 using System.IO;
 using System.Windows.Forms;
 using System.Data;
-using System.Data.Sql;
 using System.Data.SqlClient;
 namespace HIS
 {
@@ -81,14 +80,17 @@ namespace HIS
             {
                 if (dt.Rows[0][2].ToString() == txt_password.Text)
                 {
-                    string emp="";
-                  emp=( con.selectt("select employee.Name from employee where id='"+dt.Rows[0][3].ToString()+"';")).Rows[0][0].ToString();
+                    string emp = "";
+                    emp = (con.selectt("select employee.Name from employee where id='" + dt.Rows[0][3].ToString() + "';")).Rows[0][0].ToString();
                     curnet_user = dt.Rows[0][0].ToString();
-                    Main_Form frm = new Main_Form(curnet_user,emp);
+                    Main_Form frm = new Main_Form(curnet_user, emp);
                     frm.Show();
                     this.Hide();
                 }
-                else { MessageBox.Show("كلمةالمرور خطأ رجاء ادخال كلمة المرور الصحيحة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                else
+                {
+                    MessageBox.Show("كلمةالمرور خطأ رجاء ادخال كلمة المرور الصحيحة", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             //if (txt_username.Text == "asd")
             //{
@@ -109,7 +111,7 @@ namespace HIS
         
         private void Log_in_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+            Application.ExitThread();
         }
 
         private void Log_in_Load(object sender, EventArgs e)

@@ -55,8 +55,9 @@
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.اعداداتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تسجيلالخروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.اعداداتالسرفرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ms_Logout = new System.Windows.Forms.ToolStripMenuItem();
+            this.ms_Server_Setting = new System.Windows.Forms.ToolStripMenuItem();
+            this.ms_Login = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -339,26 +340,34 @@
             // اعداداتToolStripMenuItem
             // 
             this.اعداداتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.تسجيلالخروجToolStripMenuItem,
-            this.اعداداتالسرفرToolStripMenuItem});
+            this.ms_Login,
+            this.ms_Logout,
+            this.ms_Server_Setting});
             this.اعداداتToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.اعداداتToolStripMenuItem.Name = "اعداداتToolStripMenuItem";
             this.اعداداتToolStripMenuItem.Size = new System.Drawing.Size(70, 25);
             this.اعداداتToolStripMenuItem.Text = "اعدادات";
             // 
-            // تسجيلالخروجToolStripMenuItem
+            // ms_Logout
             // 
-            this.تسجيلالخروجToolStripMenuItem.Name = "تسجيلالخروجToolStripMenuItem";
-            this.تسجيلالخروجToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
-            this.تسجيلالخروجToolStripMenuItem.Text = "تسجيل الخروج";
-            this.تسجيلالخروجToolStripMenuItem.Click += new System.EventHandler(this.تسجيلالخروجToolStripMenuItem_Click);
+            this.ms_Logout.Name = "ms_Logout";
+            this.ms_Logout.Size = new System.Drawing.Size(174, 26);
+            this.ms_Logout.Text = "تسجيل الخروج";
+            this.ms_Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
-            // اعداداتالسرفرToolStripMenuItem
+            // ms_Server_Setting
             // 
-            this.اعداداتالسرفرToolStripMenuItem.Name = "اعداداتالسرفرToolStripMenuItem";
-            this.اعداداتالسرفرToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
-            this.اعداداتالسرفرToolStripMenuItem.Text = "اعدادات السرفر";
-            this.اعداداتالسرفرToolStripMenuItem.Click += new System.EventHandler(this.اعداداتالسرفرToolStripMenuItem_Click);
+            this.ms_Server_Setting.Name = "ms_Server_Setting";
+            this.ms_Server_Setting.Size = new System.Drawing.Size(174, 26);
+            this.ms_Server_Setting.Text = "اعدادات السرفر";
+            this.ms_Server_Setting.Click += new System.EventHandler(this.Server_Setting_Click);
+            // 
+            // ms_Login
+            // 
+            this.ms_Login.Name = "ms_Login";
+            this.ms_Login.Size = new System.Drawing.Size(174, 26);
+            this.ms_Login.Text = "تسجيل الدخول";
+            this.ms_Login.Click += new System.EventHandler(this.msLogin_Click);
             // 
             // Main_Form
             // 
@@ -433,8 +442,9 @@
         private System.Windows.Forms.LinkLabel linkLabel6;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem اعداداتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تسجيلالخروجToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem اعداداتالسرفرToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ms_Logout;
+        private System.Windows.Forms.ToolStripMenuItem ms_Server_Setting;
+        private System.Windows.Forms.ToolStripMenuItem ms_Login;
         //private System.Windows.Forms.Button btnPatinet;
 
     }

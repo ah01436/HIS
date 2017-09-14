@@ -124,7 +124,6 @@ namespace HIS
         {
             diagnosis = cmb_anatomy.SelectedValue.ToString();
         }
-        DataColumn dc;
         private void txt_name_TextChanged(object sender, EventArgs e)
         {
             dt = new DataTable();

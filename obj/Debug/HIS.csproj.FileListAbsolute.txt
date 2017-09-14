@@ -112,3 +112,45 @@ G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug
 G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_anatomy.resources
 G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_visits_Show.resources
 G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.csprojResolveAssemblyReference.cache
+G:\Projects\HIS\HIS\bin\Debug\HIS.exe.config
+G:\Projects\HIS\HIS\obj\Debug\HIS.exe
+G:\Projects\HIS\HIS\obj\Debug\HIS.pdb
+G:\Projects\HIS\HIS\bin\Debug\HIS.exe
+G:\Projects\HIS\HIS\bin\Debug\HIS.pdb
+G:\Projects\HIS\HIS\bin\Debug\IrisSkin2.dll
+G:\Projects\HIS\HIS\obj\Debug\HIS.csprojResolveAssemblyReference.cache
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_Admission_ultrasound_report.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_Doc_Instruction.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.patient_visit.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_anatomy.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.docSearch.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_AcceptVisit.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_abnormal_deliveries.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_contaceptive_methods.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.FRM_indecaions.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frmServerSetting.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_add_employee.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_Add_Patient_Relative.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_diagnosis.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_Entities.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_examination.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_treatment.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_update_user.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_add_user.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_user.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_visit.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.Log_in.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_Add_Patient.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_employee.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_OBSTATRIC_HISTORY.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_add_department.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_department.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_patient.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.Main_Form.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.frm_visits_Show.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.Properties.Resources.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.rp_frm_patient_info.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.rp_frm_patient.resources
+G:\Projects\HIS\HIS\obj\Debug\HIS.csproj.GenerateResource.Cache
+G:\Projects\HIS\HIS\obj\Debug\RdlCompile.cache
+G:\Projects\HIS\HIS\obj\Debug\RdlCompile.compiled

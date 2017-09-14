@@ -13,7 +13,7 @@ namespace HIS
     {
          Connection con = new Connection();
         SqlParameter[] param;
-        DataTable dt;
+       
    /*     public DataTable select_visit()
         {
             dt = new DataTable();
