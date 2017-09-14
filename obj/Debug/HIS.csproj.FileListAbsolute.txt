@@ -1,0 +1,114 @@
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\bin\Debug\HIS.exe.config
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\bin\Debug\HIS.exe
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\bin\Debug\HIS.pdb
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_add_employee.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_update_user.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_add_user.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_user.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.Log_in.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_Add_Patient.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_employee.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_fol_serv.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_OBSTATRIC_HISTORY.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_add_department.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_department.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_patient.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.Main_Form.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.Properties.Resources.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.csproj.GenerateResource.Cache
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.exe
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.pdb
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\bin\Debug\IrisSkin2.dll
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_visit.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_Add_Patient_Relative.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_diagnosis.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_treatment.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_Entities.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_examination.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frmServerSetting.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.csprojResolveAssemblyReference.cache
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_abnormal_deliveries.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_contaceptive_methods.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.FRM_indecaions.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.docSearch.resources
+C:\Users\Ahmed Gamal\Documents\GitHub\HIS\HIS\HIS\obj\Debug\HIS.frm_AcceptVisit.resources
+I:\asdasd\HIS\HIS\bin\Debug\HIS.exe.config
+I:\asdasd\HIS\HIS\obj\Debug\HIS.exe
+I:\asdasd\HIS\HIS\obj\Debug\HIS.pdb
+I:\asdasd\HIS\HIS\bin\Debug\HIS.exe
+I:\asdasd\HIS\HIS\bin\Debug\HIS.pdb
+I:\asdasd\HIS\HIS\bin\Debug\IrisSkin2.dll
+I:\asdasd\HIS\HIS\obj\Debug\HIS.csprojResolveAssemblyReference.cache
+I:\asdasd\HIS\HIS\obj\Debug\HIS.docSearch.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_AcceptVisit.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_abnormal_deliveries.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_contaceptive_methods.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.FRM_indecaions.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frmServerSetting.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_add_employee.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_Add_Patient_Relative.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_diagnosis.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_Entities.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_examination.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_treatment.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_update_user.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_add_user.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_user.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_visit.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.Log_in.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_Add_Patient.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_employee.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_OBSTATRIC_HISTORY.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_add_department.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_department.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.frm_patient.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.Main_Form.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.Properties.Resources.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.rp_frm_patient_info.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.csproj.GenerateResource.Cache
+I:\asdasd\HIS\HIS\obj\Debug\RdlCompile.cache
+I:\asdasd\HIS\HIS\obj\Debug\RdlCompile.compiled
+I:\asdasd\HIS\HIS\obj\Debug\HIS.patient_visit.resources
+I:\asdasd\HIS\HIS\obj\Debug\HIS.rp_frm_patient.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\bin\Debug\HIS.exe.config
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.exe
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.pdb
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\bin\Debug\HIS.exe
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\bin\Debug\HIS.pdb
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\bin\Debug\IrisSkin2.dll
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.patient_visit.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.docSearch.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_AcceptVisit.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_abnormal_deliveries.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_contaceptive_methods.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.FRM_indecaions.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frmServerSetting.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_add_employee.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_Add_Patient_Relative.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_diagnosis.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_Entities.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_examination.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_treatment.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_update_user.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_add_user.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_user.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_visit.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.Log_in.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_Add_Patient.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_employee.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_OBSTATRIC_HISTORY.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_add_department.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_department.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_patient.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.Main_Form.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.Properties.Resources.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.rp_frm_patient_info.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.rp_frm_patient.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.csproj.GenerateResource.Cache
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\RdlCompile.cache
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\RdlCompile.compiled
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_Admission_ultrasound_report.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_Doc_Instruction.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_anatomy.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_visits_Show.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.csprojResolveAssemblyReference.cache
