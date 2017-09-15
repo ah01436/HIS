@@ -154,3 +154,4 @@ G:\Projects\HIS\HIS\obj\Debug\HIS.csproj.GenerateResource.Cache
 G:\Projects\HIS\HIS\obj\Debug\RdlCompile.cache
 G:\Projects\HIS\HIS\obj\Debug\RdlCompile.compiled
 G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_priv_user.resources
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.csprojResolveAssemblyReference.cache

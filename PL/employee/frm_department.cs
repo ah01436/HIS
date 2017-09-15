@@ -239,7 +239,7 @@ namespace HIS
             this.frm_department_Load(sender, e);
 
         }
-<<<<<<< HEAD
+
         Connection con = new Connection();
         void loadPriv()
         {
@@ -262,8 +262,7 @@ namespace HIS
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
-=======
-
+        }
         private void rdb_id_CheckedChanged(object sender, EventArgs e)
         {
             if (rdb_id.Checked)
@@ -272,7 +271,7 @@ namespace HIS
                 txt_search.SelectionStart = 4;
             }
 
->>>>>>> b870a04a34b9fc97f646ac2fd8e3cadbf461b0f7
+
         }
     }
 }

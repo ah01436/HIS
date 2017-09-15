@@ -220,13 +220,8 @@ namespace HIS
 
             else
             {
-                dt = new DataTable();
-                dt = con.selectt("select [Name],[address],[card_realease_place],[card_id],[job],[phone]from[dbo].[patient];");
-                DataColumn dc = new DataColumn();
-                dc.ColumnName = "count";
-                dc.DefaultValue = dt.Rows.Count;
-                dt.Columns.Add(dc);
-                rp_frm_patient frm = new rp_frm_patient(dt);
+            
+                rp_frm_patient frm = new rp_frm_patient();
                 frm.Show();
             }
         }

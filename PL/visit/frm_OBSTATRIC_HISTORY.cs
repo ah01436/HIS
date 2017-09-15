@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace HIS
@@ -16,6 +12,8 @@ namespace HIS
             InitializeComponent();
             loadPriv();
         }
+        List<int> indicationValue=new List<int>();
+        List<int> Abnormal_deliveries = new List<int>();
         Connection con = new Connection();
         DataTable dt;
         bool m_reliable=false;
@@ -25,6 +23,9 @@ namespace HIS
         bool Previous_Operations = false;
         bool Family_History = false;
         string visit_id="";
+        string abnormal_delivery_code = "";
+        string indications_code = "";
+        string Contaceptive_methods_code = "";
         private void frm_OBSTATRIC_HISTORY_Load(object sender, EventArgs e)
         {
             dt = new DataTable(); 
@@ -41,7 +42,6 @@ namespace HIS
                 dgv_entities.Columns[2].HeaderText = "قبول";
                 dgv_entities.Columns[2].Visible = false;
                 dgv_entities.Columns[3].Visible = false;
-
             }
             try
             {
@@ -146,19 +146,37 @@ namespace HIS
         private void dgv_Abnormal_deliveries_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (txt_pat_code.Text == "")
-
+            {
                 MessageBox.Show("من فضلك قم باختيار اسم المريضة");
+            }
             else
+            {
                 LI_Abnormal_deliveries.Items.Add(dgv_Abnormal_deliveries.CurrentRow.Cells[1].Value.ToString());
+                if (!Abnormal_deliveries.Contains(int.Parse(dgv_Abnormal_deliveries.CurrentRow.Cells[0].Value.ToString())))
+                {
+                    Abnormal_deliveries.Add(int.Parse(dgv_Abnormal_deliveries.CurrentRow.Cells[0].Value.ToString()));
+
+                }
+              
+            }
         }
 
         private void dgv_Indications_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (txt_pat_code.Text == "")
+            {
 
                 MessageBox.Show("من فضلك قم باختيار اسم المريضة");
+            }
             else
-                LI_Indications.Items.Add(dgv_Indications.CurrentRow.Cells[1].Value.ToString());
+            {
+                LI_Indications.Items.Add(dgv_Indications.CurrentRow.Cells[1].Value.ToString());             
+                if (!indicationValue.Contains(int.Parse(dgv_Indications.CurrentRow.Cells[0].Value.ToString())))
+                {
+                    indicationValue.Add(int.Parse(dgv_Indications.CurrentRow.Cells[0].Value.ToString()));
+                }
+            }
         }
 
         private void LI_Abnormal_deliveries_DoubleClick(object sender, EventArgs e)
@@ -254,7 +272,6 @@ pramvalue[23] = txt_Obsterical_Gynecological.Text;
 pramvalue[24] = txt_others.Text;
 pramvalue[25] = f_history.Text;
 pramvalue[26] = visit_id;
-
 pramtype[0] = SqlDbType.NVarChar;
 pramtype[1] = SqlDbType.Date;
 pramtype[2] = SqlDbType.Bit;
@@ -282,11 +299,21 @@ pramtype[23] = SqlDbType.NVarChar;
 pramtype[24] = SqlDbType.NVarChar;
 pramtype[25] = SqlDbType.NVarChar;
 pramtype[26] = SqlDbType.NVarChar;
+            int i;
             if(con.ExecuteInsertOrUpdateOrDeleteUsingStoredProc("Add_OBSTATRIC_HISTORY",pramname,pramvalue,pramtype))
                             {
+                                for(i=0;i<indicationValue.Count;i++)
+                                {
+                                    con.ExecuteQueries("insert into has_indications values ( " + indicationValue[i] + ",'" + visit_id + "')");                                
+                                }
+                                for ( i = 0; i < Abnormal_deliveries.Count; i++)
+                                {
+                                    con.ExecuteQueries("insert into has_indications values ( " + Abnormal_deliveries[i] + ",'" + visit_id + "')");
+                                }
+                                con.ExecuteQueries("insert into has_Contaceptive_methods values (" + cmb_conceptive_methods1.SelectedValue.ToString() + ",'" + visit_id + "');" +
+                                                    "insert into has_Contaceptive_methods values (" + cmb_conceptive_methods2.SelectedValue.ToString() + ",'" + visit_id + "');");
                                 MessageBox.Show("تمت الاضافة بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Close();
-                             
+                                this.Close();                             
                             }
 
         }
@@ -367,6 +394,11 @@ pramtype[26] = SqlDbType.NVarChar;
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
         }
     }
   

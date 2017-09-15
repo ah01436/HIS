@@ -90,6 +90,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txt_duration2 = new System.Windows.Forms.TextBox();
+            this.txt_duration1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cmb_conceptive_methods2 = new System.Windows.Forms.ComboBox();
@@ -144,8 +146,6 @@
             this.ts_btn_clear = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ts_btn_exit = new System.Windows.Forms.ToolStripDropDownButton();
-            this.txt_duration2 = new System.Windows.Forms.TextBox();
-            this.txt_duration1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -195,6 +195,7 @@
             this.label18.TabIndex = 101;
             this.label18.Text = "OBSTATRIC HISTORY Sheet";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // groupBox1
             // 
@@ -910,6 +911,20 @@
             this.tabPage4.Text = "Contaceptive Historty";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // txt_duration2
+            // 
+            this.txt_duration2.Location = new System.Drawing.Point(542, 189);
+            this.txt_duration2.Name = "txt_duration2";
+            this.txt_duration2.Size = new System.Drawing.Size(158, 30);
+            this.txt_duration2.TabIndex = 36;
+            // 
+            // txt_duration1
+            // 
+            this.txt_duration1.Location = new System.Drawing.Point(542, 99);
+            this.txt_duration1.Name = "txt_duration1";
+            this.txt_duration1.Size = new System.Drawing.Size(158, 30);
+            this.txt_duration1.TabIndex = 35;
+            // 
             // button2
             // 
             this.button2.Image = global::HIS.Properties.Resources.plus1;
@@ -1104,7 +1119,7 @@
             this.gb_po.Controls.Add(this.txt_Obsterical_Gynecological);
             this.gb_po.Controls.Add(this.label26);
             this.gb_po.Controls.Add(this.label27);
-            this.gb_po.Location = new System.Drawing.Point(447, 142);
+            this.gb_po.Location = new System.Drawing.Point(413, 142);
             this.gb_po.Name = "gb_po";
             this.gb_po.Size = new System.Drawing.Size(717, 132);
             this.gb_po.TabIndex = 30;
@@ -1188,7 +1203,7 @@
             this.gb_MD.Controls.Add(this.Lb_allegries);
             this.gb_MD.Controls.Add(this.lb_BTI);
             this.gb_MD.Controls.Add(this.lb_CMD);
-            this.gb_MD.Location = new System.Drawing.Point(447, 6);
+            this.gb_MD.Location = new System.Drawing.Point(413, 6);
             this.gb_MD.Name = "gb_MD";
             this.gb_MD.Size = new System.Drawing.Size(717, 131);
             this.gb_MD.TabIndex = 32;
@@ -1251,7 +1266,7 @@
             // 
             this.gb_fh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_fh.Controls.Add(this.f_history);
-            this.gb_fh.Location = new System.Drawing.Point(447, 277);
+            this.gb_fh.Location = new System.Drawing.Point(413, 277);
             this.gb_fh.Name = "gb_fh";
             this.gb_fh.Size = new System.Drawing.Size(717, 147);
             this.gb_fh.TabIndex = 30;
@@ -1456,20 +1471,6 @@
             this.ts_btn_exit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ts_btn_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ts_btn_exit.Click += new System.EventHandler(this.ts_btn_exit_Click);
-            // 
-            // txt_duration2
-            // 
-            this.txt_duration2.Location = new System.Drawing.Point(542, 189);
-            this.txt_duration2.Name = "txt_duration2";
-            this.txt_duration2.Size = new System.Drawing.Size(158, 30);
-            this.txt_duration2.TabIndex = 36;
-            // 
-            // txt_duration1
-            // 
-            this.txt_duration1.Location = new System.Drawing.Point(542, 99);
-            this.txt_duration1.Name = "txt_duration1";
-            this.txt_duration1.Size = new System.Drawing.Size(158, 30);
-            this.txt_duration1.TabIndex = 35;
             // 
             // timer1
             // 
