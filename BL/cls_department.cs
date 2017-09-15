@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace HIS
@@ -31,11 +28,6 @@ namespace HIS
             dt = con.ReadData("sp_department", param);
             return dt;
         }
-
-
-
-
-
         // add new department
         // #region add_department
 
@@ -114,8 +106,6 @@ namespace HIS
                 return false;
             }
         }
-
-
         public bool delete_patient(string type, string dep_id)
         {
             try
@@ -137,6 +127,11 @@ namespace HIS
                 if (exp_num == 1)
                 {
                     return true;
+                }
+                else if (exp_num==547)
+                {
+                    MessageBox.Show("عفوا لا يمكن حذف هذا القسم لانه مرتبط ببيانات اخرى داخل النظام ", "تنبيه ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
                 else
                 {
