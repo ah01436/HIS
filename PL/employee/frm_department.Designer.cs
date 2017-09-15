@@ -76,7 +76,7 @@
             this.toolStrip_controrl.Location = new System.Drawing.Point(0, 0);
             this.toolStrip_controrl.Name = "toolStrip_controrl";
             this.toolStrip_controrl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.toolStrip_controrl.Size = new System.Drawing.Size(954, 90);
+            this.toolStrip_controrl.Size = new System.Drawing.Size(1039, 90);
             this.toolStrip_controrl.TabIndex = 24;
             this.toolStrip_controrl.Text = "toolStrip1";
             // 
@@ -172,15 +172,21 @@
             // 
             this.txt_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.txt_search.ForeColor = System.Drawing.Color.LightGray;
             this.txt_search.Location = new System.Drawing.Point(147, 51);
+            this.txt_search.MaxLength = 100;
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(630, 30);
+            this.txt_search.Size = new System.Drawing.Size(715, 30);
             this.txt_search.TabIndex = 1;
             this.txt_search.Text = "ادخل نص البحث ";
+            this.txt_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip1.SetToolTip(this.txt_search, "ادخل نص البحث");
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             this.txt_search.Enter += new System.EventHandler(this.txt_search_Enter);
+            this.txt_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_KeyDown);
+            this.txt_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_search_KeyPress);
             this.txt_search.Leave += new System.EventHandler(this.txt_search_Leave);
             // 
             // gb_patient_search
@@ -195,7 +201,7 @@
             this.gb_patient_search.Location = new System.Drawing.Point(0, 84);
             this.gb_patient_search.Name = "gb_patient_search";
             this.gb_patient_search.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gb_patient_search.Size = new System.Drawing.Size(954, 117);
+            this.gb_patient_search.Size = new System.Drawing.Size(1054, 117);
             this.gb_patient_search.TabIndex = 26;
             this.gb_patient_search.TabStop = false;
             this.gb_patient_search.Text = "البحث عن قسم ";
@@ -219,7 +225,7 @@
             this.rdb_name.AutoSize = true;
             this.rdb_name.Checked = true;
             this.rdb_name.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdb_name.Location = new System.Drawing.Point(419, 87);
+            this.rdb_name.Location = new System.Drawing.Point(461, 87);
             this.rdb_name.Name = "rdb_name";
             this.rdb_name.Size = new System.Drawing.Size(124, 27);
             this.rdb_name.TabIndex = 3;
@@ -234,20 +240,20 @@
             this.rdb_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdb_id.AutoSize = true;
             this.rdb_id.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdb_id.Location = new System.Drawing.Point(662, 87);
+            this.rdb_id.Location = new System.Drawing.Point(747, 87);
             this.rdb_id.Name = "rdb_id";
             this.rdb_id.Size = new System.Drawing.Size(113, 27);
             this.rdb_id.TabIndex = 2;
             this.rdb_id.Text = "كود القسم";
             this.rdb_id.UseVisualStyleBackColor = true;
-            this.rdb_id.CheckedChanged += new System.EventHandler(this.rdb_name_CheckedChanged);
+            this.rdb_id.CheckedChanged += new System.EventHandler(this.rdb_id_CheckedChanged);
             this.rdb_id.Click += new System.EventHandler(this.rdb_location_Click);
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(783, 54);
+            this.label1.Location = new System.Drawing.Point(868, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 23);
             this.label1.TabIndex = 0;
@@ -276,7 +282,7 @@
             this.dgv_department.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgv_department.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgv_department.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_department.Size = new System.Drawing.Size(954, 225);
+            this.dgv_department.Size = new System.Drawing.Size(1054, 91);
             this.dgv_department.TabIndex = 27;
             this.dgv_department.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_department_CellDoubleClick);
             // 
@@ -290,11 +296,11 @@
             this.lblDate,
             this.toolStripStatusLabel5,
             this.lblTime});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 435);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 301);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(17, 0, 1, 0);
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.statusStrip1.Size = new System.Drawing.Size(954, 27);
+            this.statusStrip1.Size = new System.Drawing.Size(1039, 27);
             this.statusStrip1.TabIndex = 28;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -346,7 +352,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 462);
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(900, 300);
+            this.ClientSize = new System.Drawing.Size(1039, 328);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dgv_department);
             this.Controls.Add(this.toolStrip_controrl);

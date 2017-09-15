@@ -31,11 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_add_department));
             this.toolStrip_controrl = new System.Windows.Forms.ToolStrip();
+            this.ts_btn_save = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ts_btn_clear = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ts_btn_exit = new System.Windows.Forms.ToolStripDropDownButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtDEPTplace = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_DEPT_notes = new System.Windows.Forms.TextBox();
@@ -53,9 +55,8 @@
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
-            this.ts_btn_save = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ts_btn_clear = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ts_btn_exit = new System.Windows.Forms.ToolStripDropDownButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.toolStrip_controrl.SuspendLayout();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -78,23 +79,63 @@
             this.toolStrip_controrl.TabIndex = 27;
             this.toolStrip_controrl.Text = "toolStrip1";
             // 
+            // ts_btn_save
+            // 
+            this.ts_btn_save.Image = global::HIS.Properties.Resources.save_64;
+            this.ts_btn_save.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ts_btn_save.ImageTransparentColor = System.Drawing.Color.BlueViolet;
+            this.ts_btn_save.Name = "ts_btn_save";
+            this.ts_btn_save.ShowDropDownArrow = false;
+            this.ts_btn_save.Size = new System.Drawing.Size(68, 87);
+            this.ts_btn_save.Text = "حفظ   ";
+            this.ts_btn_save.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ts_btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_btn_save.Click += new System.EventHandler(this.ts_btn_save_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 90);
+            // 
+            // ts_btn_clear
+            // 
+            this.ts_btn_clear.Image = global::HIS.Properties.Resources.edit_clear_64;
+            this.ts_btn_clear.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ts_btn_clear.ImageTransparentColor = System.Drawing.Color.BlueViolet;
+            this.ts_btn_clear.Name = "ts_btn_clear";
+            this.ts_btn_clear.ShowDropDownArrow = false;
+            this.ts_btn_clear.Size = new System.Drawing.Size(87, 87);
+            this.ts_btn_clear.Text = "تفريغ الخانات ";
+            this.ts_btn_clear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ts_btn_clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_btn_clear.Click += new System.EventHandler(this.ts_btn_clear_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 90);
             // 
+            // ts_btn_exit
+            // 
+            this.ts_btn_exit.Image = global::HIS.Properties.Resources.Cancel_64;
+            this.ts_btn_exit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ts_btn_exit.ImageTransparentColor = System.Drawing.Color.BlueViolet;
+            this.ts_btn_exit.Name = "ts_btn_exit";
+            this.ts_btn_exit.ShowDropDownArrow = false;
+            this.ts_btn_exit.Size = new System.Drawing.Size(68, 87);
+            this.ts_btn_exit.Text = "خروج";
+            this.ts_btn_exit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ts_btn_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_btn_exit.Click += new System.EventHandler(this.ts_btn_exit_Click);
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtDEPTplace);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_DEPT_notes);
@@ -116,32 +157,24 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(1154, 187);
+            this.label3.Location = new System.Drawing.Point(1171, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 33);
             this.label3.TabIndex = 72;
             this.label3.Text = "*";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(1145, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 33);
-            this.label2.TabIndex = 71;
-            this.label2.Text = "*";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtDEPTplace
             // 
             this.txtDEPTplace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDEPTplace.Location = new System.Drawing.Point(533, 187);
+            this.txtDEPTplace.Location = new System.Drawing.Point(533, 192);
             this.txtDEPTplace.Name = "txtDEPTplace";
             this.txtDEPTplace.Size = new System.Drawing.Size(615, 30);
             this.txtDEPTplace.TabIndex = 1;
             this.txtDEPTplace.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDEPTplace.Enter += new System.EventHandler(this.txtDEPTplace_Enter);
+            this.txtDEPTplace.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_KeyDown);
+            this.txtDEPTplace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_search_KeyPress);
             // 
             // label1
             // 
@@ -159,26 +192,32 @@
             // txt_DEPT_notes
             // 
             this.txt_DEPT_notes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DEPT_notes.Location = new System.Drawing.Point(533, 234);
+            this.txt_DEPT_notes.Location = new System.Drawing.Point(532, 234);
             this.txt_DEPT_notes.Multiline = true;
             this.txt_DEPT_notes.Name = "txt_DEPT_notes";
             this.txt_DEPT_notes.Size = new System.Drawing.Size(616, 213);
             this.txt_DEPT_notes.TabIndex = 2;
+            this.txt_DEPT_notes.Enter += new System.EventHandler(this.txt_DEPTname_Enter);
+            this.txt_DEPT_notes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_KeyDown);
+            this.txt_DEPT_notes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_search_KeyPress);
             // 
             // txt_DEPTname
             // 
             this.txt_DEPTname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DEPTname.Location = new System.Drawing.Point(533, 130);
+            this.txt_DEPTname.Location = new System.Drawing.Point(532, 140);
             this.txt_DEPTname.Name = "txt_DEPTname";
             this.txt_DEPTname.Size = new System.Drawing.Size(616, 30);
             this.txt_DEPTname.TabIndex = 0;
             this.txt_DEPTname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_DEPTname.TextChanged += new System.EventHandler(this.txt_DEPTname_TextChanged);
+            this.txt_DEPTname.Enter += new System.EventHandler(this.txt_DEPTname_Enter);
+            this.txt_DEPTname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_search_KeyDown);
+            this.txt_DEPTname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_search_KeyPress);
+            this.txt_DEPTname.MouseEnter += new System.EventHandler(this.txt_DEPTname_Enter);
             // 
             // txt_DeptCode
             // 
             this.txt_DeptCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DeptCode.Location = new System.Drawing.Point(533, 72);
+            this.txt_DeptCode.Location = new System.Drawing.Point(532, 85);
             this.txt_DeptCode.Name = "txt_DeptCode";
             this.txt_DeptCode.ReadOnly = true;
             this.txt_DeptCode.Size = new System.Drawing.Size(616, 30);
@@ -190,7 +229,7 @@
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(1194, 234);
+            this.label12.Location = new System.Drawing.Point(1239, 267);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 23);
             this.label12.TabIndex = 11;
@@ -200,7 +239,7 @@
             // 
             this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(1181, 130);
+            this.label34.Location = new System.Drawing.Point(1214, 144);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(106, 23);
             this.label34.TabIndex = 9;
@@ -210,7 +249,7 @@
             // 
             this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(1190, 187);
+            this.label38.Location = new System.Drawing.Point(1212, 196);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(108, 23);
             this.label38.TabIndex = 8;
@@ -220,7 +259,7 @@
             // 
             this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(1181, 79);
+            this.label42.Location = new System.Drawing.Point(1224, 89);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(95, 23);
             this.label42.TabIndex = 4;
@@ -288,44 +327,29 @@
             this.tmrTime.Interval = 1000;
             this.tmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
             // 
-            // ts_btn_save
+            // label2
             // 
-            this.ts_btn_save.Image = global::HIS.Properties.Resources.save_64;
-            this.ts_btn_save.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ts_btn_save.ImageTransparentColor = System.Drawing.Color.BlueViolet;
-            this.ts_btn_save.Name = "ts_btn_save";
-            this.ts_btn_save.ShowDropDownArrow = false;
-            this.ts_btn_save.Size = new System.Drawing.Size(68, 87);
-            this.ts_btn_save.Text = "حفظ   ";
-            this.ts_btn_save.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ts_btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ts_btn_save.Click += new System.EventHandler(this.ts_btn_save_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(1171, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 33);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "*";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ts_btn_clear
+            // label4
             // 
-            this.ts_btn_clear.Image = global::HIS.Properties.Resources.edit_clear_64;
-            this.ts_btn_clear.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ts_btn_clear.ImageTransparentColor = System.Drawing.Color.BlueViolet;
-            this.ts_btn_clear.Name = "ts_btn_clear";
-            this.ts_btn_clear.ShowDropDownArrow = false;
-            this.ts_btn_clear.Size = new System.Drawing.Size(87, 87);
-            this.ts_btn_clear.Text = "تفريغ الخانات ";
-            this.ts_btn_clear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ts_btn_clear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ts_btn_clear.Click += new System.EventHandler(this.ts_btn_clear_Click);
-            // 
-            // ts_btn_exit
-            // 
-            this.ts_btn_exit.Image = global::HIS.Properties.Resources.Cancel_64;
-            this.ts_btn_exit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ts_btn_exit.ImageTransparentColor = System.Drawing.Color.BlueViolet;
-            this.ts_btn_exit.Name = "ts_btn_exit";
-            this.ts_btn_exit.ShowDropDownArrow = false;
-            this.ts_btn_exit.Size = new System.Drawing.Size(68, 87);
-            this.ts_btn_exit.Text = "خروج";
-            this.ts_btn_exit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ts_btn_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ts_btn_exit.Click += new System.EventHandler(this.ts_btn_exit_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(1171, 139);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 33);
+            this.label4.TabIndex = 74;
+            this.label4.Text = "*";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frm_add_department
             // 
@@ -380,9 +404,10 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.ToolStripStatusLabel lblTime;
         private System.Windows.Forms.Timer tmrTime;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
 
     }
 }

@@ -8,8 +8,8 @@ namespace HIS
     public partial class frm_department : Form
     {
         frm_add_employee op = new frm_add_employee();
-        public string depCode = "";
-        public string depName = "";
+        public string depCode ;
+        public string depName ;
       //  ToolTip tt;
       //  int VisibleTime = 1000;  //in milliseconds
         cls_validate cls_v = new cls_validate();
@@ -37,11 +37,7 @@ namespace HIS
             frm.txt_DeptCode.Text = cls_validate.increasekey(dep_code, 4);
             frm.ShowDialog();
             this.frm_department_Load(sender, e);
-        }
-        private void KeyEvent(object sender, KeyEventArgs e) //Keyup Event 
-        {
-
-        }
+        }       
         private void frm_department_Load(object sender, EventArgs e)
         {
             try
@@ -50,9 +46,7 @@ namespace HIS
                 lblDate.Text = DateTime.Now.ToShortDateString();
                 lb_curent_user.Text = Main_Form.curnt_emp;
                 //this.KeyDown += new System.Windows.Forms.KeyEventHandler(KeyEvent);
-
                 dep = new cls_department();
-
                 dt = dep.selct_department();
                 if (dt.Rows.Count > 0)
                 {
@@ -112,14 +106,17 @@ namespace HIS
                     dgv_department.DataSource = dv;
                 }
             }
-            else
-            {
-            }
         }
         private void txt_search_Enter(object sender, EventArgs e)
         {
             txt_search.Clear();
             txt_search.ForeColor = Color.Black;
+            if(rdb_id.Checked)
+            {
+                txt_search.Text = "Dep_";
+                txt_search.SelectionStart = 4;
+            }
+            
         }
         private void txt_search_Leave(object sender, EventArgs e)
         {
@@ -176,8 +173,8 @@ namespace HIS
         }
         private void btn_accept_Click(object sender, EventArgs e)
         {
-            depCode += dgv_department.CurrentRow.Cells[0].Value.ToString();
-            depName += dgv_department.CurrentRow.Cells[1].Value.ToString();
+            depCode = dgv_department.CurrentRow.Cells[0].Value.ToString();
+            depName = dgv_department.CurrentRow.Cells[1].Value.ToString();
             op.setDepCode(depCode, depName);
             this.Close();
 
@@ -186,11 +183,22 @@ namespace HIS
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToShortDateString();
-            lb_curent_user.Text = Main_Form.curnt_user;
+           // lb_curent_user.Text = Main_Form.curnt_user;
         }
         private void txt_search_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '_')
+                {
+                    e.Handled = true;
+                }
+        }
+        private void txt_search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.V)
+            {
+                // cancel the "paste" function
+                e.SuppressKeyPress = true;
+            }
         }
 
         private void rdb_location_Click(object sender, EventArgs e)
@@ -231,6 +239,7 @@ namespace HIS
             this.frm_department_Load(sender, e);
 
         }
+<<<<<<< HEAD
         Connection con = new Connection();
         void loadPriv()
         {
@@ -253,6 +262,17 @@ namespace HIS
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message); }
+=======
+
+        private void rdb_id_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdb_id.Checked)
+            {
+                txt_search.Text = "Dep_";
+                txt_search.SelectionStart = 4;
+            }
+
+>>>>>>> b870a04a34b9fc97f646ac2fd8e3cadbf461b0f7
         }
     }
 }

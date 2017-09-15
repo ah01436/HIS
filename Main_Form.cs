@@ -61,6 +61,10 @@ namespace HIS
                 {
                     e.Cancel = true;
                 }
+                else
+                {
+                    Application.ExitThread();
+                }
             }
             else
             {

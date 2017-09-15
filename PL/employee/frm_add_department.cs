@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace HIS
@@ -31,9 +25,23 @@ namespace HIS
             {
                 ts_btn_exit_Click(sender, e);
             }
-            
-
         }
+        private void txt_search_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '_')
+            {
+                e.Handled = true;
+            }
+        }
+        private void txt_search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.V)
+            {
+                // cancel the "paste" function
+                e.SuppressKeyPress = true;
+            }
+        }
+
         private void ts_btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -117,7 +125,7 @@ namespace HIS
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToShortDateString();
-            lb_curent_user.Text = Main_Form.curnt_user; 
+            //lb_curent_user.Text = Main_Form.curnt_user; 
         }
 
         private void frm_add_department_KeyDown(object sender, KeyEventArgs e)
@@ -136,14 +144,15 @@ namespace HIS
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void txt_DEPTname_Enter(object sender, EventArgs e)
         {
-
+            txt_DEPTname.SelectAll();
         }
 
-        private void txt_DEPTname_TextChanged(object sender, EventArgs e)
+        private void txtDEPTplace_Enter(object sender, EventArgs e)
         {
-
+            txtDEPTplace.SelectAll();
         }
+
     }
 }
