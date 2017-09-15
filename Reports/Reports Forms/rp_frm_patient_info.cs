@@ -18,10 +18,12 @@ namespace HIS
         {
             InitializeComponent();
             this.dt = d;
+            loadPriv();
         }
         public rp_frm_patient_info()
         {
-            InitializeComponent();         
+            InitializeComponent();
+            loadPriv();
         }
         private void rp_frm_patient_info_Load(object sender, EventArgs e)
         {
@@ -51,5 +53,30 @@ namespace HIS
             reportViewer1.LocalReport.DataSources.Add(rtds);
             reportViewer1.RefreshReport();
         }
+        
+        void loadPriv()
+        {
+            Connection con = new Connection();
+            dt = new DataTable();
+            dt = con.selectt("select priv_display,priv_delete,priv_edit from tb_priv where priv_screen_id=3 and priv_user_id='" + Main_Form.curnt_user + "';");
+            try
+            {
+                if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+                {
+                   btn_search.Enabled = false;
+                }
+                if (dt.Rows[0][1].ToString() == "False" || dt.Rows[0][1].ToString() == string.Empty)
+                {
+                    //  btn_delete.Enabled = false;
+                }
+                if (dt.Rows[0][2].ToString() == "False" || dt.Rows[0][2].ToString() == string.Empty)
+                {
+                  //  btn_edit.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
+
     }
 }

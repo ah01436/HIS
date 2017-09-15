@@ -74,6 +74,12 @@
     <Compile Include="frm_Doc_Instruction.Designer.cs">
       <DependentUpon>frm_Doc_Instruction.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_priv_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_priv_user.Designer.cs">
+      <DependentUpon>frm_priv_user.cs</DependentUpon>
+    </Compile>
     <Compile Include="patient_visit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Doc_Instruction.resx">
       <DependentUpon>frm_Doc_Instruction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_priv_user.resx">
+      <DependentUpon>frm_priv_user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="patient_visit.resx">
       <DependentUpon>patient_visit.cs</DependentUpon>

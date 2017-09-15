@@ -80,29 +80,83 @@ namespace HIS
         }
         private void btn_department_Click(object sender, EventArgs e)
         {
-            frm_department frm = new frm_department();
-            frm.ShowDialog();
+            Connection con = new Connection();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=9 and priv_user_id='" + Main_Form.curnt_user + "';");
+
+            if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+            {
+            }
+            else
+            {
+                frm_department frm = new frm_department();
+                frm.ShowDialog();
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            frm_employee frm = new frm_employee();
-            frm.ShowDialog();
+            Connection con = new Connection();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=8 and priv_user_id='" + Main_Form.curnt_user + "';");
+
+            if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+            {
+            }
+            else
+            {
+                frm_employee frm = new frm_employee();
+                frm.ShowDialog();
+            }
         }
         private void btn_pat_Click(object sender, EventArgs e)
         {
+            Connection con = new Connection();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=1 and priv_user_id='" + Main_Form.curnt_user + "';");
+
+            if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+            {
+            }
+            else { 
             frm_patient frm = new frm_patient();
             frm.ShowDialog();
-        }
+            }
+            }
         private void btn_doc_Click(object sender, EventArgs e)
         {
-            frm_user frm = new frm_user();
-            frm.ShowDialog();
+            Connection con = new Connection();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=10 and priv_user_id='" + Main_Form.curnt_user + "';");
+
+            if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+            {
+            }
+            else
+            {
+                frm_user frm = new frm_user();
+                frm.ShowDialog();
+            }
         }
         private void button2_Click_1(object sender, EventArgs e)
         {
+            Connection con = new Connection();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=2 and priv_user_id='" + Main_Form.curnt_user + "';");
+
+            if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+            {
+            }
+            else
+            { 
             frm_visit frm = new frm_visit();
             frm.Name = "add_visit";
             frm.ShowDialog();
+            }
         }
         private void btn_accept_visit_Click(object sender, EventArgs e)
         {
@@ -111,16 +165,36 @@ namespace HIS
         }
         private void btn_report_Click(object sender, EventArgs e)
         {
-            //Connection con = new Connection();
-            //DataTable dt = new DataTable();
-            //dt = con.selectt("select [Name],[address],[card_realease_place],[card_id],[job],[phone]from[dbo].[patient] where [id]='Pat_101';");
-            rp_frm_patient_info frm = new rp_frm_patient_info();
-            frm.Show();
-        }
+
+            Connection con = new Connection();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=3 and priv_user_id='" + Main_Form.curnt_user + "';");
+
+            if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+            {
+            }
+            else
+            {
+                rp_frm_patient_info frm = new rp_frm_patient_info();
+                frm.Show();
+            }
+            }
         private void button2_Click_2(object sender, EventArgs e)
         {
-            frm_OBSTATRIC_HISTORY frm = new frm_OBSTATRIC_HISTORY();
-            frm.Show();
+            Connection con = new Connection();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=5 and priv_user_id='" + Main_Form.curnt_user + "';");
+
+            if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+            {
+            }
+            else
+            {
+                frm_OBSTATRIC_HISTORY frm = new frm_OBSTATRIC_HISTORY();
+                frm.Show();
+            }
         }
         private void btn_log_out_Click(object sender, EventArgs e)
         {
@@ -132,27 +206,57 @@ namespace HIS
         private void btn_patient_Click(object sender, EventArgs e)
         {
             Connection con = new Connection();
-            DataTable dt = new DataTable();
-            dt = con.selectt("select [Name],[address],[card_realease_place],[card_id],[job],[phone]from[dbo].[patient];");
-            //MessageBox.Show(dt.Rows.Count.ToString());
-            //MessageBox.Show(dt.Rows[0][0].ToString());
-            DataColumn dc = new DataColumn();
-            dc.ColumnName = "count";
-            dc.DefaultValue = dt.Rows.Count;
-            dt.Columns.Add(dc);
-           // MessageBox.Show(dt.Columns[6].DefaultValue.ToString());
-            rp_frm_patient frm = new rp_frm_patient(dt);
-            frm.Show();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=4 and priv_user_id='" + Main_Form.curnt_user + "';");
+
+            if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+            {
+            }
+
+            else
+            {
+                dt = new DataTable();
+                dt = con.selectt("select [Name],[address],[card_realease_place],[card_id],[job],[phone]from[dbo].[patient];");
+                DataColumn dc = new DataColumn();
+                dc.ColumnName = "count";
+                dc.DefaultValue = dt.Rows.Count;
+                dt.Columns.Add(dc);
+                rp_frm_patient frm = new rp_frm_patient(dt);
+                frm.Show();
+            }
         }
         private void add_ultra_report_Click(object sender, EventArgs e)
         {
-            frm_Admission_ultrasound_report frm = new frm_Admission_ultrasound_report();
-            frm.Show();
+            Connection con = new Connection();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=7 and priv_user_id='" + Main_Form.curnt_user + "';");
+
+            if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+            {
+            }
+            else
+            {
+                frm_Admission_ultrasound_report frm = new frm_Admission_ultrasound_report();
+                frm.Show();
+            }
         }
         private void btn_instructions_Click(object sender, EventArgs e)
         {
-            frm_Doc_Instruction frm = new frm_Doc_Instruction();
-            frm.Show();
+            Connection con = new Connection();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=6 and priv_user_id='" + Main_Form.curnt_user + "';");
+
+            if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+            {
+            }
+            else
+            {
+                frm_Doc_Instruction frm = new frm_Doc_Instruction();
+                frm.Show();
+            }
         }
         private void Logout_Click(object sender, EventArgs e)
         {
@@ -196,6 +300,9 @@ namespace HIS
             btn_employee.Visible = true;
             btn_user.Visible = true;
             btn_department.Visible = true;
-        }  
+            
+        }
+
+  
     }
 }

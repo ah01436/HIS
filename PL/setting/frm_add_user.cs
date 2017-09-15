@@ -11,6 +11,7 @@ namespace HIS
 {
     public partial class frm_add_user : Form
     {
+        Connection con = new Connection();
         public frm_add_user()
         {
             InitializeComponent();
@@ -68,8 +69,11 @@ namespace HIS
                     {
                         if (user.insertdata("insert", txt_user_id.Text, txt_user_name.Text, txt_password.Text, txt_emp_id.Text))
                         {
-                            MessageBox.Show("تمت الاضافة بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
+                            if (con.ExecuteQueries("insert into tb_priv(priv_screen_id,priv_user_id) select screen_id,'" + txt_user_id.Text + "' from tb_screen;"))
+                            {
+                                MessageBox.Show("تمت الاضافة بنجاح ", "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+                            }
                         }
                     }
                 }

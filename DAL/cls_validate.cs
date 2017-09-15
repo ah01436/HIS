@@ -6,10 +6,12 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Data;
 namespace HIS
 {
     class cls_validate
     {
+        
         // this funcation use to in crease the key 
         public static string increasekey(string id,int length)
         {
@@ -92,6 +94,8 @@ namespace HIS
 
             return regex.IsMatch(text);
         }
+       
+       
 
 
         }

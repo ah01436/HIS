@@ -12,12 +12,14 @@ namespace HIS
         {
             this.KeyPreview = true;
             InitializeComponent();
+            loadPriv();
         }
         public frm_patient(frm_visit frm)
         {
             this.KeyPreview = true;
             InitializeComponent();
             ob = frm;
+            loadPriv();
         }
         Connection con = new Connection();
         cls_patient pat;
@@ -354,6 +356,28 @@ namespace HIS
             pat_cod = dgv_patient.CurrentRow.Cells[0].Value.ToString();
             pat_name = dgv_patient.CurrentRow.Cells[1].Value.ToString();
             this.Close();
+        }
+        void loadPriv()
+        {
+            dt = new DataTable();
+            dt = con.selectt("select priv_add,priv_delete,priv_edit from tb_priv where priv_screen_id=1 and priv_user_id='" + Main_Form.curnt_user + "';");
+            try
+            {
+                if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+                {
+                    btn_add.Enabled = false;
+                }
+                if (dt.Rows[0][1].ToString() == "False" || dt.Rows[0][1].ToString() == string.Empty)
+                {
+                    btn_delete.Enabled = false;
+                }
+                if (dt.Rows[0][2].ToString() == "False" || dt.Rows[0][2].ToString() == string.Empty)
+                {
+                    btn_edit.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
     }
 }

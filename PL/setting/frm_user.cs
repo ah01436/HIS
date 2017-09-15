@@ -7,9 +7,11 @@ namespace HIS
 {
     public partial class frm_user : Form
     {
+       public static string user_code;
         public frm_user()
         {
             InitializeComponent();
+            loadPriv();
         }
 
         string user_id;
@@ -162,6 +164,50 @@ namespace HIS
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToShortDateString();
             lb_curent_user.Text = Main_Form.curnt_user; 
+        }
+
+        private void dgv_user_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            Connection con = new Connection();
+            DataTable dt;
+            dt = new DataTable();
+            dt = con.selectt("select priv_display from tb_priv where priv_screen_id=11 and priv_user_id='" + Main_Form.curnt_user + "';");
+          
+                if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+                {
+
+                }
+                else
+                {
+                    user_code = dgv_user.CurrentRow.Cells[0].Value.ToString();
+                    frm_priv_user frm = new frm_priv_user();
+                    frm.Show();
+                }
+            
+        }
+        Connection con = new Connection();
+        void loadPriv()
+        {
+            dt = new DataTable();
+            dt = con.selectt("select priv_add,priv_delete,priv_edit from tb_priv where priv_screen_id=10 and priv_user_id='" + Main_Form.curnt_user + "';");
+            try
+            {
+                if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+                {
+                    btn_add.Enabled = false;
+                }
+                if (dt.Rows[0][1].ToString() == "False" || dt.Rows[0][1].ToString() == string.Empty)
+                {
+                    btn_delete.Enabled = false;
+                }
+                if (dt.Rows[0][2].ToString() == "False" || dt.Rows[0][2].ToString() == string.Empty)
+                {
+                    btn_edit.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
     }
 }

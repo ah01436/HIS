@@ -17,11 +17,13 @@ namespace HIS
         {
             this.KeyPreview = true;
             InitializeComponent();
+            loadPriv();
         }
         public frm_department(frm_add_employee frm)
         {
             this.op = frm;
             InitializeComponent();
+            loadPriv();
         }
         string dep_code;
         cls_department dep;
@@ -228,6 +230,29 @@ namespace HIS
             frm.ShowDialog();
             this.frm_department_Load(sender, e);
 
+        }
+        Connection con = new Connection();
+        void loadPriv()
+        {
+            dt = new DataTable();
+            dt = con.selectt("select priv_add,priv_delete,priv_edit from tb_priv where priv_screen_id=9 and priv_user_id='" + Main_Form.curnt_user + "';");
+            try
+            {
+                if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+                {
+                    btn_add.Enabled = false;
+                }
+                if (dt.Rows[0][1].ToString() == "False" || dt.Rows[0][1].ToString() == string.Empty)
+                {
+                    btn_delete.Enabled = false;
+                }
+                if (dt.Rows[0][2].ToString() == "False" || dt.Rows[0][2].ToString() == string.Empty)
+                {
+                    btn_edit.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
     }
 }

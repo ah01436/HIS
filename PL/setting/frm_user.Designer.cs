@@ -31,9 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_user));
             this.toolStrip_controrl = new System.Windows.Forms.ToolStrip();
+            this.btn_add = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_edit = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_delete = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_exit = new System.Windows.Forms.ToolStripDropDownButton();
             this.gb_patient_search = new System.Windows.Forms.GroupBox();
             this.rdb_user_name = new System.Windows.Forms.RadioButton();
             this.rdb_emp_name = new System.Windows.Forms.RadioButton();
@@ -50,10 +54,6 @@
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
-            this.btn_add = new System.Windows.Forms.ToolStripDropDownButton();
-            this.btn_edit = new System.Windows.Forms.ToolStripDropDownButton();
-            this.btn_delete = new System.Windows.Forms.ToolStripDropDownButton();
-            this.btn_exit = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStrip_controrl.SuspendLayout();
             this.gb_patient_search.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_user)).BeginInit();
@@ -78,20 +78,72 @@
             this.toolStrip_controrl.TabIndex = 28;
             this.toolStrip_controrl.Text = "toolStrip1";
             // 
+            // btn_add
+            // 
+            this.btn_add.Image = global::HIS.Properties.Resources.if_Add_Male_User_49576;
+            this.btn_add.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btn_add.ImageTransparentColor = System.Drawing.Color.BlueViolet;
+            this.btn_add.Name = "btn_add";
+            this.btn_add.ShowDropDownArrow = false;
+            this.btn_add.Size = new System.Drawing.Size(68, 87);
+            this.btn_add.Text = "إضافة";
+            this.btn_add.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 90);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Image = global::HIS.Properties.Resources.edit_profile_;
+            this.btn_edit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btn_edit.ImageTransparentColor = System.Drawing.Color.BlueViolet;
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.ShowDropDownArrow = false;
+            this.btn_edit.Size = new System.Drawing.Size(68, 87);
+            this.btn_edit.Text = "تعديل ";
+            this.btn_edit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 90);
             // 
+            // btn_delete
+            // 
+            this.btn_delete.Image = global::HIS.Properties.Resources._1_04_64;
+            this.btn_delete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btn_delete.ImageTransparentColor = System.Drawing.Color.BlueViolet;
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.ShowDropDownArrow = false;
+            this.btn_delete.Size = new System.Drawing.Size(68, 87);
+            this.btn_delete.Text = "حذف ";
+            this.btn_delete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 90);
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.Image = global::HIS.Properties.Resources.Cancel_64;
+            this.btn_exit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btn_exit.ImageTransparentColor = System.Drawing.Color.BlueViolet;
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.ShowDropDownArrow = false;
+            this.btn_exit.Size = new System.Drawing.Size(68, 87);
+            this.btn_exit.Text = "خروج";
+            this.btn_exit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // gb_patient_search
             // 
@@ -207,6 +259,7 @@
             this.dgv_user.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_user.Size = new System.Drawing.Size(1060, 413);
             this.dgv_user.TabIndex = 30;
+            this.dgv_user.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_user_CellDoubleClick);
             // 
             // statusStrip1
             // 
@@ -269,58 +322,6 @@
             this.tmrTime.Enabled = true;
             this.tmrTime.Interval = 1000;
             this.tmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
-            // 
-            // btn_add
-            // 
-            this.btn_add.Image = global::HIS.Properties.Resources.if_Add_Male_User_49576;
-            this.btn_add.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_add.ImageTransparentColor = System.Drawing.Color.BlueViolet;
-            this.btn_add.Name = "btn_add";
-            this.btn_add.ShowDropDownArrow = false;
-            this.btn_add.Size = new System.Drawing.Size(68, 87);
-            this.btn_add.Text = "إضافة";
-            this.btn_add.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
-            // 
-            // btn_edit
-            // 
-            this.btn_edit.Image = global::HIS.Properties.Resources.edit_profile_;
-            this.btn_edit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_edit.ImageTransparentColor = System.Drawing.Color.BlueViolet;
-            this.btn_edit.Name = "btn_edit";
-            this.btn_edit.ShowDropDownArrow = false;
-            this.btn_edit.Size = new System.Drawing.Size(68, 87);
-            this.btn_edit.Text = "تعديل ";
-            this.btn_edit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.Image = global::HIS.Properties.Resources._1_04_64;
-            this.btn_delete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_delete.ImageTransparentColor = System.Drawing.Color.BlueViolet;
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.ShowDropDownArrow = false;
-            this.btn_delete.Size = new System.Drawing.Size(68, 87);
-            this.btn_delete.Text = "حذف ";
-            this.btn_delete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // btn_exit
-            // 
-            this.btn_exit.Image = global::HIS.Properties.Resources.Cancel_64;
-            this.btn_exit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btn_exit.ImageTransparentColor = System.Drawing.Color.BlueViolet;
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.ShowDropDownArrow = false;
-            this.btn_exit.Size = new System.Drawing.Size(68, 87);
-            this.btn_exit.Text = "خروج";
-            this.btn_exit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // frm_user
             // 

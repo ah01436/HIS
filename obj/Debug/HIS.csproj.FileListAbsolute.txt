@@ -111,7 +111,6 @@ G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug
 G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_Doc_Instruction.resources
 G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_anatomy.resources
 G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_visits_Show.resources
-G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.csprojResolveAssemblyReference.cache
 G:\Projects\HIS\HIS\bin\Debug\HIS.exe.config
 G:\Projects\HIS\HIS\obj\Debug\HIS.exe
 G:\Projects\HIS\HIS\obj\Debug\HIS.pdb
@@ -154,3 +153,4 @@ G:\Projects\HIS\HIS\obj\Debug\HIS.rp_frm_patient.resources
 G:\Projects\HIS\HIS\obj\Debug\HIS.csproj.GenerateResource.Cache
 G:\Projects\HIS\HIS\obj\Debug\RdlCompile.cache
 G:\Projects\HIS\HIS\obj\Debug\RdlCompile.compiled
+G:\Computers&Information\رابعة حاسبات\C#Application\HIS\HIS\obj\Debug\HIS.frm_priv_user.resources

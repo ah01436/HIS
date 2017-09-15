@@ -55,9 +55,9 @@
             this.linkLabel6 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.اعداداتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ms_Login = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_Logout = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_Server_Setting = new System.Windows.Forms.ToolStripMenuItem();
-            this.ms_Login = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +75,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 706);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(17, 0, 1, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1362, 27);
+            this.statusStrip1.Size = new System.Drawing.Size(1354, 27);
             this.statusStrip1.TabIndex = 21;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -333,7 +333,7 @@
             this.اعداداتToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1362, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1354, 29);
             this.menuStrip1.TabIndex = 39;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -347,6 +347,13 @@
             this.اعداداتToolStripMenuItem.Name = "اعداداتToolStripMenuItem";
             this.اعداداتToolStripMenuItem.Size = new System.Drawing.Size(70, 25);
             this.اعداداتToolStripMenuItem.Text = "اعدادات";
+            // 
+            // ms_Login
+            // 
+            this.ms_Login.Name = "ms_Login";
+            this.ms_Login.Size = new System.Drawing.Size(174, 26);
+            this.ms_Login.Text = "تسجيل الدخول";
+            this.ms_Login.Click += new System.EventHandler(this.msLogin_Click);
             // 
             // ms_Logout
             // 
@@ -362,20 +369,13 @@
             this.ms_Server_Setting.Text = "اعدادات السرفر";
             this.ms_Server_Setting.Click += new System.EventHandler(this.Server_Setting_Click);
             // 
-            // ms_Login
-            // 
-            this.ms_Login.Name = "ms_Login";
-            this.ms_Login.Size = new System.Drawing.Size(174, 26);
-            this.ms_Login.Text = "تسجيل الدخول";
-            this.ms_Login.Click += new System.EventHandler(this.msLogin_Click);
-            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.BackgroundImage = global::HIS.Properties.Resources.Hospital2;
-            this.ClientSize = new System.Drawing.Size(1362, 733);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.linkLabel6);
             this.Controls.Add(this.linkLabel4);
             this.Controls.Add(this.linkLabel3);

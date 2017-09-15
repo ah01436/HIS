@@ -318,6 +318,7 @@ namespace HIS
            catch (SqlException ex)
            {
                MessageBox.Show(ex.Number.ToString());
+               MessageBox.Show(ex.ToString());
                return false;
 
            }

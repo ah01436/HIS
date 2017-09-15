@@ -14,6 +14,7 @@ namespace HIS
         public frm_employee()
         {
             InitializeComponent();
+            loadPriv();
         }
         string emp_code;
         cls_employee emp;
@@ -346,7 +347,29 @@ namespace HIS
             lblDate.Text = DateTime.Now.ToShortDateString();
             lb_curent_user.Text = Main_Form.curnt_user; 
         }
-
+        void loadPriv()
+        {
+            Connection con = new Connection();
+            dt = new DataTable();
+            dt = con.selectt("select priv_add,priv_delete,priv_edit from tb_priv where priv_screen_id=8 and priv_user_id='" + Main_Form.curnt_user + "';");
+            try
+            {
+                if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+                {
+                    btn_add.Enabled = false;
+                }
+                if (dt.Rows[0][1].ToString() == "False" || dt.Rows[0][1].ToString() == string.Empty)
+                {
+                    btn_delete.Enabled = false;
+                }
+                if (dt.Rows[0][2].ToString() == "False" || dt.Rows[0][2].ToString() == string.Empty)
+                {
+                    btn_edit.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
        
     }
 }

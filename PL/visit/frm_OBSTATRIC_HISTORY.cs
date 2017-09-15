@@ -14,6 +14,7 @@ namespace HIS
         public frm_OBSTATRIC_HISTORY()
         {
             InitializeComponent();
+            loadPriv();
         }
         Connection con = new Connection();
         DataTable dt;
@@ -345,5 +346,28 @@ pramtype[26] = SqlDbType.NVarChar;
             }
 
         }
+        void loadPriv()
+        {
+            dt = new DataTable();
+            dt = con.selectt("select priv_add,priv_delete,priv_edit from tb_priv where priv_screen_id=5 and priv_user_id='" + Main_Form.curnt_user + "';");
+            try
+            {
+                if (dt.Rows[0][0].ToString() == "False" || dt.Rows[0][0].ToString() == string.Empty)
+                {
+                    ts_btn_save.Enabled = false;
+                }
+                if (dt.Rows[0][1].ToString() == "False" || dt.Rows[0][1].ToString() == string.Empty)
+                {
+                  //  btn_delete.Enabled = false;
+                }
+                if (dt.Rows[0][2].ToString() == "False" || dt.Rows[0][2].ToString() == string.Empty)
+                {
+               //     btn_edit.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
+        }
     }
+  
 }
